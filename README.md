@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # HUSH — Marketplace de moda (front-end)
 
 Sitio web responsive construido con HTML, CSS y JavaScript vanilla. No requiere instalación de paquetes: abre `index.html` en un navegador o publica los tres archivos principales en un hosting estático.
@@ -38,3 +39,6 @@ La búsqueda, el carrito y los favoritos funcionan en el navegador con datos de 
 En `script.js`, edita el arreglo `starterProducts` para cambiar los productos iniciales. Cada producto usa estas propiedades: `id`, `title`, `price`, `category`, `brand`, `seller`, `condition`, `badge`, `description` e `image`.
 
 Las imágenes del catálogo de ejemplo se sirven desde Unsplash y requieren conexión a internet. Sustitúyelas por fotografías propias y autorizadas antes de publicar el sitio.
+=======
+# HUSH
+>>>>>>> 4bcae8104191d7d8905875043dd065706570a67e
