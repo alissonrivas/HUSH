@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8fa">
+  <meta name="description" content="HUSH: descubre prendas únicas, compra moda circular y publica la ropa que ya no usas.">
+  <meta property="og:title" content="HUSH — Tu estilo, en un solo lugar">
+  <meta property="og:description" content="Compra, vende y descubre nuevas formas de llevar tu estilo.">
+  <meta property="og:type" content="website">
+  <title>HUSH — Tu estilo, en un solo lugar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="announcement" id="announcement">
+    <p><span aria-hidden="true">✦</span> Una nueva forma de darle vida a tu estilo.</p>
+    <button class="announcement-close" id="closeAnnouncement" type="button" aria-label="Cerrar anuncio">×</button>
+  </div>
+
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a class="logo" href="#inicio" aria-label="HUSH, página de inicio">HUSH<span>.</span></a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a class="active" href="#inicio">Inicio</a>
+        <a href="#tienda">Descubrir</a>
+        <a href="#vender">Vender</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+
+      <div class="nav-actions" aria-label="Acciones de usuario">
+        <button class="icon-btn" id="searchBtn" type="button" aria-label="Abrir búsqueda" aria-expanded="false" aria-controls="searchPanel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+        <button class="icon-btn" id="favoritesBtn" type="button" aria-label="Ver favoritos">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.1-8.8 10.2-8.8 10.2S3.2 13.9 3.2 8.8A4.6 4.6 0 0 1 12 6.5a4.6 4.6 0 0 1 8.8 2.3Z"></path></svg>
+          <span class="sr-only">Favoritos</span>
+          <span class="action-count" id="favoriteCount">0</span>
+        </button>
+        <button class="icon-btn cart-trigger" id="cartBtn" type="button" aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.5L22 8H6"></path><circle cx="10" cy="20" r="1.2"></circle><circle cx="18" cy="20" r="1.2"></circle></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="profile-btn" id="profileBtn" type="button" aria-label="Abrir opciones de cuenta">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"></circle><path d="M4.8 20a7.2 7.2 0 0 1 14.4 0"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-panel" id="searchPanel" hidden>
+      <div class="container search-inner">
+        <label class="sr-only" for="searchInput">Buscar productos</label>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        <input id="searchInput" type="search" placeholder="Busca prendas, marcas o estilos…" autocomplete="off">
+        <button id="clearSearch" type="button" class="clear-search" aria-label="Limpiar búsqueda">×</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> MODA PARA TU PROPIA HISTORIA</p>
+          <h1>Tu estilo,<br><em>sin límites.</em></h1>
+          <p class="hero-text">Encuentra prendas con personalidad, descubre nuevas marcas y dale una segunda vida a lo que ya no usas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#tienda">Explorar colección <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#vender">Quiero vender <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>Estilo único. Consumo más consciente.</span></div>
+        </div>
+
+        <div class="hero-visual" aria-label="Composición editorial de moda en tonos rosados">
+          <div class="hero-photo hero-photo-back"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Personas explorando prendas de moda" fetchpriority="high"></div>
+          <div class="hero-photo hero-photo-front"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85" alt="Selección de prendas y accesorios" fetchpriority="high"></div>
+          <div class="hero-sticker"><span>HUSH</span><strong>FIND<br>YOUR<br>STYLE</strong><small>EST. 2026</small></div>
+          <span class="hero-sparkle sparkle-one" aria-hidden="true">✳</span>
+          <span class="hero-sparkle sparkle-two" aria-hidden="true">✦</span>
+        </div>
+      </div>
+      <div class="container trust-row">
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">♡</span><div><strong>Moda circular</strong><small>Prendas con otra historia</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">✧</span><div><strong>Estilo para todos</strong><small>Encuentra algo muy tuyo</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">⌕</span><div><strong>Descubre y conecta</strong><small>Con vendedores independientes</small></div></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">↗</span><div><strong>Compra con confianza</strong><small>Información clara de cada prenda</small></div></div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="tienda">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">PIEZAS QUE MERECEN OTRA HISTORIA</p><h2>Descubre algo <em>especial.</em></h2></div>
+          <p class="heading-note">Una selección para encontrar tu próximo favorito.</p>
+        </div>
+
+        <div class="catalog-toolbar">
+          <div class="category-pills" id="categories" role="group" aria-label="Filtrar por categoría">
+            <button class="pill active" type="button" data-filter="todos" aria-pressed="true">Todo</button>
+            <button class="pill" type="button" data-filter="mujer" aria-pressed="false">Mujer</button>
+            <button class="pill" type="button" data-filter="hombre" aria-pressed="false">Hombre</button>
+            <button class="pill" type="button" data-filter="accesorios" aria-pressed="false">Accesorios</button>
+            <button class="pill" type="button" data-filter="calzado" aria-pressed="false">Calzado</button>
+          </div>
+          <label class="sort-control"><span>Ordenar por</span>
+            <select id="sortSelect" aria-label="Ordenar productos">
+              <option value="featured">Destacados</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+              <option value="name">Nombre: A-Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="active-filters" id="activeFilters" aria-live="polite"></div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span aria-hidden="true">⌕</span><h3>No encontramos resultados</h3><p>Prueba con otra búsqueda o cambia los filtros.</p>
+          <button class="btn btn-outline" id="resetFilters" type="button">Ver todos los productos</button>
+        </div>
+        <p class="catalog-footnote">Los productos mostrados son parte de una demostración del catálogo. La disponibilidad y la información de cada vendedor deben confirmarse antes de comprar.</p>
+      </div>
+    </section>
+
+    <section class="sell-section" id="vender">
+      <div class="container sell-grid">
+        <div class="sell-copy">
+          <p class="eyebrow">TU CLÓSET TIENE MUCHO POR CONTAR</p>
+          <h2>Lo que ya no usas,<br><em>puede ser su favorito.</em></h2>
+          <p>Publica tus prendas, comparte sus detalles y encuentra a alguien que quiera darles una nueva vida. Comenzar es muy sencillo.</p>
+          <button class="btn btn-dark" id="sellBtn" type="button">Publicar una prenda <span aria-hidden="true">↗</span></button>
+          <div class="sell-assurance"><span aria-hidden="true">✓</span> Tú decides qué publicar y qué información compartir.</div>
+        </div>
+        <div class="sell-visual">
+          <div class="sell-image"><img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=900&q=85" alt="Prendas de ropa organizadas en un perchero" loading="lazy"></div>
+          <div class="sell-caption"><span>PRE-LOVED, RE-LOVED</span><strong>Una nueva oportunidad<br>para cada prenda.</strong></div>
+          <div class="sell-sticker" aria-hidden="true">♡</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brands-section" id="marcas">
+      <div class="container">
+        <div class="section-heading brands-heading">
+          <div><p class="eyebrow">TUS REFERENCIAS FAVORITAS</p><h2>Encuentra tu <em>vibra.</em></h2></div>
+          <p class="heading-note">Explora productos asociados a estas marcas.</p>
+        </div>
+        <div class="brand-list" id="brandList">
+          <button class="brand" type="button" data-brand="Zara">ZARA<span>↗</span></button>
+          <button class="brand brand-serif" type="button" data-brand="H&amp;M">H&amp;M<span>↗</span></button>
+          <button class="brand" type="button" data-brand="Nike">NIKE<span>↗</span></button>
+          <button class="brand brand-lower" type="button" data-brand="adidas">adidas<span>↗</span></button>
+          <button class="brand" type="button" data-brand="Pull&amp;Bear">PULL&amp;BEAR<span>↗</span></button>
+          <button class="brand brand-serif" type="button" data-brand="Bershka">BERSHKA<span>↗</span></button>
+        </div>
+        <p class="brand-disclaimer">Las marcas se muestran como referencias de estilo o etiqueta de los productos publicados; HUSH no representa ni afirma tener afiliación oficial con ellas.</p>
+      </div>
+    </section>
+
+    <section class="feature-section" id="nosotros">
+      <div class="container feature-grid">
+        <div class="feature-art">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85" alt="Look de moda con estilo urbano" loading="lazy">
+          <div class="feature-label"><span>HUSH EDIT</span><strong>Wear it<br>your way.</strong></div>
+          <span class="feature-orbit orbit-one" aria-hidden="true">✳</span><span class="feature-orbit orbit-two" aria-hidden="true">♡</span>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow">MÁS QUE UNA TIENDA</p>
+          <h2>La moda cambia.<br><em>Tu esencia permanece.</em></h2>
+          <p>HUSH nace para acercar a las personas a prendas que conectan con su personalidad. Un espacio para descubrir, compartir y darle más recorrido a la ropa que amamos.</p>
+          <a class="text-link" href="#tienda">Descubre HUSH <span aria-hidden="true">→</span></a>
+          <div class="feature-stat"><strong>01</strong><span>Descubre prendas únicas y dale espacio a nuevas posibilidades.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="hush-club">
+      <div class="container newsletter-inner">
+        <div class="newsletter-mark" aria-hidden="true">H.</div>
+        <p class="eyebrow">THE HUSH CLUB</p>
+        <h2>Un poco de inspiración<br><em>en tu bandeja de entrada.</em></h2>
+        <p>Déjanos tu correo para conocer novedades, colecciones y noticias de HUSH.</p>
+        <form id="newsletterForm" novalidate>
+          <label class="sr-only" for="emailInput">Tu correo electrónico</label>
+          <input id="emailInput" name="email" type="email" placeholder="Tu correo electrónico" autocomplete="email" required>
+          <button class="btn btn-dark" type="submit">Quiero recibir novedades <span aria-hidden="true">↗</span></button>
+        </form>
+        <small class="newsletter-privacy">Al continuar, aceptas recibir novedades de HUSH. Esta demostración no envía ni almacena tu correo.</small>
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="logo" href="#inicio">HUSH<span>.</span></a><p>Tu estilo, en un solo lugar.</p><span class="footer-mantra">FIND YOUR OWN WAY.</span></div>
+      <div><strong>Descubre</strong><a href="#tienda">Tienda</a><a href="#marcas">Marcas</a><a href="#nosotros">Nuestra idea</a></div>
+      <div><strong>Comunidad</strong><a href="#vender">Publicar una prenda</a><a href="#hush-club">HUSH Club</a><a href="#vender">Cómo vender</a></div>
+      <div><strong>Información</strong><a href="#ayuda" data-info="Ayuda">Centro de ayuda</a><a href="#contacto" data-info="Contacto">Contacto</a><a href="#privacidad" data-info="Privacidad">Privacidad</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="currentYear">2026</span> HUSH. Todos los derechos reservados.</span><span>Hecho para encontrar tu propio estilo <b>♡</b></span></div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <dialog class="drawer-dialog" id="cartDialog" aria-labelledby="cartTitle">
+    <div class="drawer-backdrop" data-close-dialog></div>
+    <section class="drawer-panel">
+      <div class="drawer-header"><div><p class="eyebrow">TU SELECCIÓN</p><h2 id="cartTitle">Tu carrito <span id="cartItemLabel">(0)</span></h2></div><button class="close-btn" type="button" data-close-dialog aria-label="Cerrar carrito">×</button></div>
+      <div class="drawer-content" id="cartItems"></div>
+      <div class="drawer-footer"><div class="subtotal-row"><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div><p>Envíos, pagos e impuestos se confirmarían durante el proceso de compra.</p><button class="btn btn-dark btn-full" id="checkoutBtn" type="button">Continuar con la compra <span aria-hidden="true">↗</span></button><button class="continue-link" type="button" data-close-dialog>Seguir explorando</button></div>
+    </section>
+  </dialog>
+
+  <!-- Favorites drawer -->
+  <dialog class="drawer-dialog" id="favoritesDialog" aria-labelledby="favoritesTitle">
+    <div class="drawer-backdrop" data-close-dialog></div>
+    <section class="drawer-panel">
+      <div class="drawer-header"><div><p class="eyebrow">GUARDADOS PARA DESPUÉS</p><h2 id="favoritesTitle">Tus favoritos <span id="favoriteItemLabel">(0)</span></h2></div><button class="close-btn" type="button" data-close-dialog aria-label="Cerrar favoritos">×</button></div>
+      <div class="drawer-content" id="favoriteItems"></div>
+      <div class="drawer-footer"><button class="btn btn-dark btn-full" type="button" data-close-dialog>Seguir descubriendo <span aria-hidden="true">↗</span></button></div>
+    </section>
+  </dialog>
+
+  <!-- Product details -->
+  <dialog class="modal-dialog product-dialog" id="productDialog" aria-labelledby="productDialogTitle">
+    <div class="modal-backdrop" data-close-dialog></div>
+    <section class="modal-panel product-modal-panel"><button class="close-btn modal-close" type="button" data-close-dialog aria-label="Cerrar detalle">×</button><div id="productDetail"></div></section>
+  </dialog>
+
+  <!-- New listing form -->
+  <dialog class="modal-dialog" id="sellDialog" aria-labelledby="sellDialogTitle">
+    <div class="modal-backdrop" data-close-dialog></div>
+    <section class="modal-panel form-modal-panel">
+      <button class="close-btn modal-close" type="button" data-close-dialog aria-label="Cerrar formulario">×</button>
+      <p class="eyebrow">DALE UNA NUEVA VIDA</p><h2 id="sellDialogTitle">Publica tu <em>prenda.</em></h2>
+      <p class="modal-intro">Completa los datos para añadir una publicación de demostración a este catálogo.</p>
+      <form id="sellForm" class="stacked-form">
+        <div class="form-grid-two">
+          <label>Nombre de la prenda<input name="title" type="text" maxlength="55" placeholder="Ej. Chaqueta vintage" required></label>
+          <label>Precio (USD)<input name="price" type="number" min="0.01" max="10000" step="0.01" placeholder="25.00" required></label>
+        </div>
+        <div class="form-grid-two">
+          <label>Categoría<select name="category" required><option value="">Selecciona una</option><option value="mujer">Mujer</option><option value="hombre">Hombre</option><option value="accesorios">Accesorios</option><option value="calzado">Calzado</option></select></label>
+          <label>Estado de la prenda<select name="condition" required><option value="">Selecciona una</option><option>Nuevo con etiqueta</option><option>Como nuevo</option><option>Muy buen estado</option><option>Buen estado</option></select></label>
+        </div>
+        <label>Descripción<textarea name="description" rows="3" maxlength="300" placeholder="Cuenta detalles importantes: talla, color, medidas o algún detalle de uso…" required></textarea></label>
+        <label>Enlace de imagen (opcional)<input name="image" type="url" placeholder="https://…"><small>Usa un enlace público seguro (https). No subas información personal.</small></label>
+        <label class="seller-name-label">Nombre de tienda o usuario<input name="seller" type="text" maxlength="30" placeholder="Ej. @mi.closet" required></label>
+        <p class="form-error" id="sellFormError" role="alert"></p>
+        <button class="btn btn-dark btn-full" type="submit">Vista previa de publicación <span aria-hidden="true">↗</span></button>
+        <p class="form-disclaimer">La publicación se guarda únicamente en este navegador. Para vender de verdad se necesita una cuenta y un servicio de publicación conectado.</p>
+      </form>
+    </section>
+  </dialog>
+
+  <!-- Account / information -->
+  <dialog class="modal-dialog" id="accountDialog" aria-labelledby="accountTitle">
+    <div class="modal-backdrop" data-close-dialog></div>
+    <section class="modal-panel info-modal-panel"><button class="close-btn modal-close" type="button" data-close-dialog aria-label="Cerrar">×</button><div class="modal-monogram">H.</div><p class="eyebrow">TU ESPACIO HUSH</p><h2 id="accountTitle">Muy pronto, <em>tu cuenta.</em></h2><p id="accountMessage">El acceso de usuarios todavía no está conectado. En una versión de producción podrás crear una cuenta, gestionar tus publicaciones y consultar tus compras.</p><button class="btn btn-dark btn-full" type="button" data-close-dialog>Entendido</button></section>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
